@@ -1,0 +1,618 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/********************************************************
+GOOGLE FONTS
+********************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap');
+
+
+/********************************************************
+BASIC CSS
+********************************************************/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+a, a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.container:before, .container::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.col-100 {
+    width: 100%;
+    float: left;
+    padding: 0 15px;
+}
+
+.col-75 {
+    width: 75%;
+    float: left;
+    padding: 0 15px;
+}
+
+.col-66 {
+    width: 66.67%;
+    float: left;
+    padding: 0 15px;
+}
+
+.col-50 {
+    width: 50%;
+    float: left;
+    padding: 0 15px;
+}
+
+.col-40 {
+    width: 40%;
+    float: left;
+    padding: 0 15px;
+}
+
+.col-33 {
+    width: 33.33%;
+    float: left;
+    padding: 0 15px;
+}
+
+.col-25 {
+    width: 25%;
+    float: left;
+    padding: 0 15px;
+}
+
+.col-20 {
+    width: 20%;
+    float: left;
+    padding: 0 15px;
+}
+
+@media (max-width: 500px) {
+	.col-20 {
+		width: 50%;
+	}
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    outline: none;
+    background: #e7434e;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+
+
+/********************************************************
+CUSTOM CSS
+********************************************************/
+
+/********************************************************
+HEADER
+********************************************************/
+header {
+    position: absolute;
+    width: 100%;
+    padding: 15px 0;
+    z-index: 2;
+}
+
+.logo {
+    width: 165px;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+.main-menu {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.main-menu li {
+    color: #f9fafe;
+    margin-left: 24px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    transition: .3s;
+}
+
+.main-menu li.nav-btn {
+    border: 1px solid #f9fafe;
+    border-radius: 3px;
+    transition: .3s;
+}
+
+.main-menu li.nav-btn a {
+    padding: 10px 36px;
+    display: block;
+}
+
+.main-menu li:hover {
+    color: #e7434e
+}
+
+.main-menu li.nav-btn:hover {
+    border: 1px solid #E7434E;
+    background: hsl(356, 77%, 58%);
+    color: white;
+}
+
+
+/********************************************************
+HOME
+********************************************************/
+
+
+.home-content {
+    background-image: url("../img/bg/home-bg.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.home-wrapper {
+    z-index: 1;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+}
+
+.home-content .home-wrapper h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.home-content .home-wrapper p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 48px;
+}
+
+.home-content .home-wrapper .home-search,
+.footer-wrapper .container .col-40.newsletter .subscribe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-content .home-wrapper .home-search input,
+.footer-wrapper .container .col-40.newsletter .subscribe input {
+    border: none;
+    outline: none;
+    height: 42px;
+    width: 350px;
+    border-radius: 3px 0 0 3px;
+    padding: 0 20px;
+}
+
+.home-content .home-wrapper .home-search input::placeholder,
+.footer-wrapper .container .col-40.newsletter .subscribe input::placeholder {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    color: rgb(113, 113, 113);
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.home-content .home-wrapper .home-search .home-btn,
+.footer-wrapper .container .col-40.newsletter .subscribe .sbs-btn {
+    height: 42px;
+    line-height: 42px;
+    width: 150px;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+
+.home-content .home-wrapper .home-search .home-btn img {
+    margin-right: 8px;
+}
+
+
+/********************************************************
+COUNTER
+********************************************************/
+
+.counter {
+    padding: 0 15px;
+}
+.counter-wrapper {
+    height: 120px;
+    box-shadow: 0 8px 8px 8px rgba(131, 131, 131, .15);
+    margin-top: -60px;
+    position: relative;
+    background: white;
+    border-radius: 3px;
+    padding: 30px;
+}
+
+.single-cnt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 140px;
+    position: relative;
+}
+
+.single-cnt:before {
+    position: absolute;
+    content: '';
+    right: -14px;
+    top: 0;
+    width: 2px;
+    height: 70px;
+    background: rgba(113, 113, 113, 0.2);
+}
+
+.single-cnt.last-cnt:before {
+    content: none;
+}
+
+.cnt-num {
+    font-size: 24px;
+    font-weight: 700;
+    color: #343434;
+    margin-bottom: 12px;
+}
+
+.cnt-txt {
+    font-size: 15px;
+    font-weight: 500;
+    color: #717171;
+    text-transform: capitalize;
+}
+
+
+/********************************************************
+DESTINATION
+********************************************************/
+
+.dst-heading,
+.boat-heading {
+    text-align: center;
+    padding: 75px 0;
+    text-transform: uppercase;
+}
+
+.dst-heading h3,
+.boat-heading h3 {
+    color: #343434;
+    font-size: 24px;
+    font-weight: 400px;
+    margin-bottom: 12px;
+}
+
+.dst-heading p,
+.boat-heading p {
+    color: #717171;
+    font-size: 14px;
+    font-weight: 400px;
+}
+
+.single-dst,
+.single-boat {
+    height: 360px;
+    background-image: url("../img/dst/dst1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 3px;
+    z-index: 0;
+}
+
+.single-dst:before,
+.single-boat:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,.2) 60%, rgba(0,0,0,.7) 100%);
+    height: 100%;
+    width: 100%;
+    transition: .3s;
+    z-index: -1;
+}
+
+.single-dst:hover:before,
+.single-boat:hover:before {
+    background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,.35) 60%, rgba(0,0,0,.85) 100%);
+}
+
+
+.dst-1 {
+    background-image: url("../img/dst/dst1.jpg");
+}
+
+.dst-2 {
+    background-image: url("../img/dst/dst2.jpg");
+}
+
+.dst-3 {
+    background-image: url("../img/dst/dst3.jpg");
+}
+
+.dst-4 {
+    background-image: url("../img/dst/dst4.jpg");
+}
+
+.dst-5 {
+    background-image: url("../img/dst/dst5.jpg");
+}
+
+.single-dst .red,
+.single-boat .red-boat {
+    height: 40px;
+    width: 70px;
+    background: #e7434e;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+.single-dst .red img {
+    margin-right: 6px;
+}
+
+.single-dst .place
+.single-boat .boat-detail {
+    z-index: 1;
+}
+
+.single-dst h4,
+.single-boat .boat-detail h4 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.single-dst p,
+.single-boat .boat-detail .boat-txt {
+    font-family: 'Raleway', sans-serif; 
+    font-size: 16px;
+    color: #eeeeee;
+    font-weight: 400;
+}
+
+.desti-button,
+.boat-btn {
+    text-align: center;
+}
+
+.dst-btn,
+.bt-btn {
+    height: 40px;
+    width: 250px;
+    margin: 60px 0;
+    background-color: white;
+    border: 1px solid #717171;
+    border-radius: 3px;
+    color: #343434;
+    text-align: center;
+    line-height: 40px;
+    transition: .3s;
+}
+
+.dst-btn:hover,
+.bt-btn:hover {
+    background-color: #e7474e;
+    border: 1px solid #e7474e;
+    color: #fff;
+}
+
+
+/********************************************************
+CALL-TO-ACTION
+********************************************************/
+
+
+.c2a-wrapper {
+    background-image: url("../img/bg/call-to-action-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 360px;
+    width: 100%;
+    text-align: center;
+    padding: 70px 0;
+    position: relative;
+    z-index: -1;
+}
+
+.c2a-wrapper:before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background:rgba(0,0,0,.6);
+    z-index: -1;
+}
+
+.c2a-wrapper h2 {
+    font-size: 60px;
+    margin-bottom: 12px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.c2a-wrapper p {
+    font-size: 24px;
+    margin-bottom: 50px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.c2a-wrapper .c2a-btn {
+    height: 40px;
+    width: 250px;
+    line-height: 40px;
+    border-radius: 3px;
+} 
+
+/* NOT ACTING AS A BUTTON - PROBLEM */
+
+
+/********************************************************
+BOAT
+********************************************************/
+
+.single-boat .red-boat {
+    width: 85px;
+}
+
+.single-boat .boat-txt>span {
+    margin-right: 12px;
+}
+
+.single-boat .boat-txt>span i {
+    margin-right: 6px;
+}
+
+.boat-1 {
+    background-image: url("../img/boat/boat1.jpg");
+}
+
+.boat-2 {
+    background-image: url("../img/boat/boat2.jpg");
+}
+
+.boat-3 {
+    background-image: url("../img/boat/boat3.jpg");
+}
+
+.boat-4 {
+    background-image: url("../img/boat/boat4.jpg");
+}
+
+
+/********************************************************
+FOOTER
+********************************************************/
+
+.footer-wrapper {
+    padding: 60px 0;
+    background: #343434;
+    width: 100%;
+}
+
+.footer-wrapper h4 {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-weight: 700;
+    color: #eeeeee;
+}
+
+.footer-wrapper .col-20 a {
+    display: block;
+    font-size: 12px;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #cccccc;
+    transition: .3s;
+}
+
+.footer-wrapper .col-20 a:hover {
+    color: #e7474e;
+    transform: translateX(6px);
+}
+
+.subscribe {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.subscribe input::placeholder {
+    font-size: 12px;
+}
+
+.subscribe a {
+    font-size: 12px;
+    width: 20%;
+}
+
+.newsletter .follow-icons .single-fol-icon {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: #717171;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 12px;
+    transition: .3s;
+}
+
+.newsletter .follow-icons .single-fol-icon:hover {
+    background: #e7474e;
+}
